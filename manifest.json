@@ -1,0 +1,27 @@
+{
+  "id": "com.iic.flowmap.story",
+  "name": "Global Inventory Flow Map (Story)",
+  "version": "1.0.0",
+  "type": "widget",
+  "description": "Animated flow map (source→target) for stock movement visualization",
+  "vendor": "IIC BI Team",
+  "dataBindings": {
+    "flows": {
+      "feeds": [
+        { "id": "source", "type": "dimension", "description": "Source country (ISO-2 or ISO-3)" },
+        { "id": "target", "type": "dimension", "description": "Target country (ISO-2 or ISO-3)" },
+        { "id": "value",  "type": "measure",   "description": "Quantity / Volume" }
+      ],
+      "required": true
+    }
+  },
+  "resources": {
+    "js": [
+      "libs/amcharts5/index.js",
+      "libs/amcharts5/map.js",
+      "libs/geodata/worldLow.js",
+      "Component.js"
+    ],
+    "css": []
+  }
+}
